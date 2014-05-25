@@ -4,14 +4,14 @@ Codebook for Getting and Cleaning Data Course Project
 The following is the list of variable names used in the tidydata dataset.
 
 Column #  Variable Name
-1 subject           
-2 activitycode
-3 activity
-4 timebodyaccmeanx
-5 timebodyaccmeany
-6 timebodyaccmeanz
-7 timebodyaccstdx
-8 timebodyaccstdy
+* 1 subject           
+* 2 activitycode
+* 3 activity
+* 4 timebodyaccmeanx
+* 5 timebodyaccmeany
+* 6 timebodyaccmeanz
+* 7 timebodyaccstdx
+* 8 timebodyaccstdy
 9 timebodyaccstdz
 10 timegravityaccmeanx
 11 timegravityaccmeany

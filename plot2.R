@@ -12,4 +12,9 @@ DateTime <- strptime(paste(epcdf$Date," ",epcdf$Time),"%d/%m/%Y %H:%M:%S")
 epcdf <- cbind(DateTime, epcdf)
 
 ## Create line plot
+par(mar=c(6, 4 , 2, 2))
 plot(epcdf$DateTime, epcdf$Global_active_power, type="l", ylab="Global Active Power (kilowatts)", xlab="")
+
+## Create png file
+dev.copy(png, "/Users/rsusvilla/CourseraDataScience/plot2.png")
+dev.off()

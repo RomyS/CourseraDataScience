@@ -14,7 +14,7 @@ epcdf <- cbind(DateTime, epcdf)
 ## Set 2 x 2 plotting area
 par(mfrow = c(2, 2))
 ## Set margins
-par(mar=c(4, .5 , .5, .5))
+par(mar=c(4, 4 , 4, 2))
 
 ## Plot 1
 plot(epcdf$DateTime, epcdf$Global_active_power, type="l", ylab="Global Active Power", xlab="")
@@ -27,7 +27,11 @@ plot(epcdf$DateTime, epcdf$Sub_metering_1, type="n", ylab="Energy sub metering",
 lines(epcdf$DateTime, epcdf$Sub_metering_1, col="black")
 lines(epcdf$DateTime, epcdf$Sub_metering_2, col="red")
 lines(epcdf$DateTime, epcdf$Sub_metering_3, col="blue")
-legend("topright", lty=1, legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col=c("black","red","blue"))
+legend("topright", lty=1, legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col=c("black","red","blue"), xjust=1, cex=.7)
 
 ## Plot 4
 plot(epcdf$DateTime, epcdf$Global_reactive_power, type="l", ylab="Global_reactive_power", xlab="datetime")
+
+## Create png file
+dev.copy(png, "/Users/rsusvilla/CourseraDataScience/plot4.png")
+dev.off()

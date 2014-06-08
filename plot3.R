@@ -12,8 +12,13 @@ DateTime <- strptime(paste(epcdf$Date," ",epcdf$Time),"%d/%m/%Y %H:%M:%S")
 epcdf <- cbind(DateTime, epcdf)
 
 ## Create multiple line plots with legend
+par(mar=c(4, 3 , 2, .5))
 plot(epcdf$DateTime, epcdf$Sub_metering_1, type="n", ylab="Energy sub metering", xlab="")
 lines(epcdf$DateTime, epcdf$Sub_metering_1, col="black")
 lines(epcdf$DateTime, epcdf$Sub_metering_2, col="red")
 lines(epcdf$DateTime, epcdf$Sub_metering_3, col="blue")
-legend("topright", lty=1, legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col=c("black","red","blue"))
+legend("topright", lty=1, legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col=c("black","red","blue"), xjust=1)
+
+## Create png file
+dev.copy(png, "/Users/rsusvilla/CourseraDataScience/plot3.png")
+dev.off()

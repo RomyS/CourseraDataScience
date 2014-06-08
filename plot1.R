@@ -12,4 +12,9 @@ DateTime <- strptime(paste(epcdf$Date," ",epcdf$Time),"%d/%m/%Y %H:%M:%S")
 epcdf <- cbind(DateTime, epcdf)
 
 ## Create histogram
+par(mar=c(6, 4 , 2, 2))
 hist(epcdf$Global_active_power, xlab="Global Active Power (kilowatts)", col="red", main="Global Active Power")
+
+## Create png file
+dev.copy(png, "/Users/rsusvilla/CourseraDataScience/plot1.png")
+dev.off()

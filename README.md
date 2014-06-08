@@ -1,6 +1,5 @@
-======================================================
-Getting and Cleaning Data Course Project by R Susvilla
-Version 1.0
+## Getting and Cleaning Data Course Project by R Susvilla
+## Version 1.0
 ======================================================
 
 The data source for this project is the Human Activity Recognition Using Smartphones Dataset downloaded
